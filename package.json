@@ -1,0 +1,12 @@
+{
+  "name": "curso-ai-contactos",
+  "private": true,
+  "version": "0.1.0",
+  "description": "App sencilla de contactos con Vercel Functions y Supabase",
+  "scripts": {
+    "dev": "echo \"dev script local\""
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.2"
+  }
+}

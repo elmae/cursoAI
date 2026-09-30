@@ -4,8 +4,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EsneydinAI</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <p>Hola, esta es mi página de prueba</p>
+    <main class="container">
+      <h1>Agenda de contactos</h1>
+
+      <section class="card">
+        <h2>Acceso</h2>
+        <label for="accessKey">Clave compartida</label>
+        <div class="row">
+          <input id="accessKey" name="accessKey" type="password" placeholder="Ingresa la clave">
+          <button id="connectBtn" type="button">Conectar</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 id="formTitle">Nuevo contacto</h2>
+        <form id="contactForm">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" maxlength="100" required>
+
+          <label for="phone">Telefono</label>
+          <input id="phone" name="phone" maxlength="20" required>
+
+          <label for="address">Direccion</label>
+          <input id="address" name="address" maxlength="200" required>
+
+          <div class="row">
+            <button type="submit" id="saveBtn">Guardar</button>
+            <button type="button" id="cancelEditBtn" class="secondary hidden">Cancelar edicion</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Lista</h2>
+        <label for="search">Buscar</label>
+        <input id="search" name="search" placeholder="Buscar por nombre, telefono o direccion">
+        <ul id="contactsList" class="list"></ul>
+      </section>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+    <script src="app.js" defer></script>
   </body>
 </html>
